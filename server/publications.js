@@ -4,4 +4,6 @@
  * @author Braden Whitten
  */
 
-Meteor.subscribe('posts');
+Meteor.publish('posts', function() {
+  return Posts.find();
+});
