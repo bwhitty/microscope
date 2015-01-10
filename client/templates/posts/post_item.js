@@ -10,5 +10,9 @@ Template.postItem.helpers({
     a.href = this.url;
 
     return a.hostname;
+  },
+
+  submitted: function () {
+    return this.submitted ? moment(this.submitted).fromNow() : '';
   }
 });
