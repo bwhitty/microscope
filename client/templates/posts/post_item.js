@@ -18,5 +18,9 @@ Template.postItem.helpers({
 
   submitted: function () {
     return this.submitted ? moment(this.submitted).fromNow() : '';
+  },
+
+  commentsCount: function () {
+    return Comments.find({postId: this._id}).count();
   }
 });

@@ -3,11 +3,8 @@
         <div class="post-content">
             <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span>&nbsp;<span><em>{{submitted}}</em></span></h3>
             <p>
-                {{#if author}}
-                    submitted by {{author}}
-                {{else}}
-                    author unknown
-                {{/if}}
+                submitted by {{author}},
+                <a href="{{pathFor 'postPage'}}">{{commentsCount}} comments</a>
                 {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
             </p>
         </div>
